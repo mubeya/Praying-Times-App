@@ -1,0 +1,118 @@
+body {
+  text-align: center;
+  background-color: #eeeeee8c;
+  color: white;
+}
+
+main {
+  text-align: -webkit-center;
+}
+
+.main-sec {
+  text-align: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #11839de6;
+  padding: 6rem 0;
+}
+
+h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.row {
+  width: 100%;
+}
+
+.times {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 12px;
+}
+
+.calender {
+  color: #f8f2abe6;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.seperator {
+  width: 100%;
+  height: 1px;
+  max-width: 480px;
+  background-color: rgba(248, 242, 171, 0.6);
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .seperator2 {
+    width: 1px;
+    height: 70px;
+    max-width: 480px;
+    background-color: rgba(248, 242, 171, 0.6);
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#nextPraying span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #f8f2abe6;
+}
+
+#nowTime span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #f8f2abe6;
+}
+
+form {
+  color: #334257;
+}
+
+#cityName {
+  border: none;
+  background: white;
+  color: #11839d;
+  height: 40px;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.praying {
+  padding: 10px 0 0 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.praying span {
+  font-size: 1.4rem;
+}
+
+.active {
+  background-color: #67bc9a;
+  border-radius: 3px;
+}
+
+.timetable {
+  color: white;
+  background-color: #06758f;
+  padding: 15px 5px;
+  border-radius: 3px;
+}
+
+.praying span {
+  color: #f8f2abe6;
+}
