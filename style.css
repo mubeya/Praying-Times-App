@@ -13,7 +13,7 @@ main {
   min-height: 100vh;
   margin: 0 auto;
   background-color: #11839de6;
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 h1 {
@@ -99,6 +99,7 @@ form {
 
 .praying span {
   font-size: 1.4rem;
+  color: #f8f2abe6;
 }
 
 .active {
@@ -111,8 +112,4 @@ form {
   background-color: #06758f;
   padding: 15px 5px;
   border-radius: 3px;
-}
-
-.praying span {
-  color: #f8f2abe6;
 }
