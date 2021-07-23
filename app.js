@@ -53,7 +53,7 @@ function getPrayingTimes(){
                             aksam.innerHTML  = `<p>Akşam  <br><span> ${datas.timings.Sunset.substr(0,5)}</span></p>`;
                             yatsi.innerHTML  = `<p>Yatsı  <br><span> ${datas.timings.Isha.substr(0,5)}</span></p>`;
                             
-                            nowTime.innerHTML = `<p>Bilgisayar Saati</p><span>${new Date().getHours() + ":" +  new Date().getMinutes()}</span>` 
+                            nowTime.innerHTML = `<p>Bilgisayar Saati</p><span>${('0' + new Date().getHours()).slice(-2) + ":" +  ('0' + new Date().getMinutes()).slice(-2)}</span>` 
 
                             // check wich praying time now then make that praying time background active
                             // get timestamp from API and convert to normal human date time
@@ -100,14 +100,14 @@ function getPrayingTimes(){
                                   // ( if now time<fajr; answer is: fajr - nowtime else answer is : endoftheday - nowtime + fajr )
                                   // resp.data[index+1].timings.Fajr for the next day fajr time calculating
                                 if(Math.floor(new Date().getTime()/1000.0) > toTimestamp(year,month,day,(resp.data[index+1].timings.Fajr.substr(0,2)-3), resp.data[index+1].timings.Fajr.substr(3,2))){
-                                    document.getElementById("nextPraying").innerHTML = `<p>İmsak Vaktine Kalan Süre</p>
-                                                                                        <p>${toHumanDate( toTimestamp(year,month,day,20,59) - Math.floor(new Date().getTime()/1000.0) +
-                                                                                        resp.data[index+1].timings.Fajr.substr(1,1)*3600 +  resp.data[index+1].timings.Fajr.substr(3,2)*60)}</p>`  // *3600 for hour and *60 for minutes calculate for timestamp
+                                    document.getElementById("nextPraying").innerHTML = `<p>İmsak Vaktine Kalan Süre <br \></p>
+                                                                                        <span>${toHumanDate( toTimestamp(year,month,day,20,59) - Math.floor(new Date().getTime()/1000.0) +
+                                                                                        resp.data[index+1].timings.Fajr.substr(1,1)*3600 +  resp.data[index+1].timings.Fajr.substr(3,2)*60)}</span>`  // *3600 for hour and *60 for minutes calculate for timestamp
                                 }
                                 else {
-                                    document.getElementById("nextPraying").innerHTML = `<p>İmsak Vaktine Kalan Süre</p>
-                                                                                        <p>${toHumanDate(toTimestamp(year,month,day,( resp.data[index+1].timings.Fajr.substr(0,2)-3), resp.data[index+1].timings.Fajr.substr(3,2)) 
-                                                                                        - Math.floor(new Date().getTime()/1000.0))}</p>`
+                                    document.getElementById("nextPraying").innerHTML = `<p>İmsak Vaktine Kalan Süre <br \></p>
+                                                                                        <span>${toHumanDate(toTimestamp(year,month,day,( resp.data[index+1].timings.Fajr.substr(0,2)-3), resp.data[index+1].timings.Fajr.substr(3,2)) 
+                                                                                        - Math.floor(new Date().getTime()/1000.0))}</span>`
                                 }  
                             }
                         }
